@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato • Mansão Ferradura • Búzios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #d4af87; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body, html { height:100%; background:#0f0f0f; color:white; font-family:'Inter', sans-serif; overflow-x:hidden; }
+     
+        .hero {
+            position:fixed; top:0; left:0; width:100%; height:100%; z-index:1;
+            background: url('fotos/0.png') center/cover no-repeat;
+            filter: brightness(0.70);
+        }
+     
+        .content {
+            position:relative; z-index:2; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:120px 40px 140px;
+        }
+     
+        .card {
+            background:rgba(15,15,15,0.85); backdrop-filter:blur(20px);
+            border:1px solid rgba(212,175,135,0.2);
+            border-radius:24px; padding:60px 80px; max-width:680px; width:100%;
+            box-shadow:0 30px 80px rgba(0,0,0,0.7);
+        }
+     
+        h1 { font-family:'Playfair Display', serif; font-size:4rem; font-weight:700; text-align:center; margin-bottom:16px; color:var(--accent); }
+        .subtitle { text-align:center; font-size:1.35rem; opacity:0.9; letter-spacing:2px; margin-bottom:50px; text-transform:uppercase; font-weight:300; }
+     
+        form { display:grid; gap:28px; }
+        label { font-size:1.1rem; font-weight:500; display:block; margin-bottom:8px; color:#d4af87; }
+        input, textarea {
+            width:100%; padding:16px 20px; border:none; border-radius:12px;
+            background:rgba(255,255,255,0.08); color:white; font-size:1.05rem;
+            font-family:'Inter',sans-serif; transition:all 0.3s;
+        }
+        input:focus, textarea:focus {
+            outline:none; background:rgba(255,255,255,0.15); box-shadow:0 0 0 2px var(--accent);
+        }
+        textarea { resize:vertical; min-height:140px; }
+        .btn {
+            background:var(--accent); color:#000; font-weight:600; font-size:1.2rem;
+            padding:18px; border:none; border-radius:50px; cursor:pointer;
+            transition:all 0.4s; margin-top:20px; letter-spacing:1px;
+        }
+        .btn:hover {
+            background:#e6c89b; transform:translateY(-3px); box-shadow:0 15px 30px rgba(212,175,135,0.3);
+        }
+        .contact-info { margin-top:60px; text-align:center; font-size:1.15rem; opacity:0.9; }
+        .contact-info a { color:var(--accent); text-decoration:none; font-weight:500; }
+        .contact-info a:hover { text-decoration:underline; }
+        /* Badges topo */
+        .top-badge {
+            position:fixed; top:40px; z-index:11; background:#000; color:#d4af87;
+            padding:14px 28px; border-radius:50px; font-family:'Playfair Display', serif; font-weight:700;
+            letter-spacing:1px; box-shadow:0 10px 40px rgba(0,0,0,0.4);
+        }
+        #area-badge { left:40px; font-size:1.8rem; min-width:260px; text-align:center; }
+        #counter { left:50%; transform:translateX(-50%); font-size:1.15rem; padding:10px 28px; font-family:'Inter',sans-serif; font-weight:500; color:white; }
+        #info-badge { right:40px; font-size:1.8rem; min-width:260px; text-align:center; }
+        /* Navegação inferior */
+        nav {
+            position:fixed; bottom:0; left:0; width:100%; background:rgba(255,255,255,0.75);
+            backdrop-filter:blur(20px); padding:20px 0; text-align:center; z-index:100;
+            border-top:1px solid rgba(212,175,135,0.2);
+        }
+        nav a {
+            color:#000; text-decoration:none; margin:0 50px; font-weight:500;
+            font-size:1.05rem; letter-spacing:1px; position:relative; transition:all 0.3s;
+        }
+        nav a:hover { color:var(--accent); }
+        nav a::after {
+            content:''; position:absolute; width:0; height:1px; bottom:-8px; left:50%;
+            background:var(--accent); transition:all 0.4s;
+        }
+        nav a:hover::after { width:100%; left:0; }
+        @media (max-width:768px) {
+            .card { padding:40px 30px; }
+            h1 { font-size:3rem; }
+            .top-badge { top:20px; font-size:1.4rem; padding:10px 20px; }
+            #area-badge, #info-badge { min-width:160px; }
+            nav a { margin:0 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero" id="hero-bg"></div>
+ 
+    <div id="area-badge" class="top-badge">Mansão Ferradura</div>
+    <div id="counter" class="top-badge">Contato</div>
+    <div id="info-badge" class="top-badge">R$ 6.000.000</div>
+ 
+    <div class="content">
+        <div class="card">
+            <h1>Entre em Contato</h1>
+            <p class="subtitle">Exclusividade • Privacidade • Búzios</p>
+         
+            <!-- FORMULÁRIO COM FORMSUBMIT (100% GRATUITO) -->
+            <form action="https://formsubmit.co/fabiofsrj43@gmail.com, silvania.li@hotmail.com" method="POST">
+                <div>
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="João Silva">
+                </div>
+              
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="joao@email.com">
+                </div>
+              
+                <div>
+                    <label for="telefone">Telefone / WhatsApp</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(22) 99999-9999">
+                </div>
+              
+                <div>
+                    <label for="mensagem">Mensagem (opcional)</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Estou interessado na mansão da Praia da Ferradura..."></textarea>
+                </div>
+                
+                <!-- Campo para permitir resposta direta no e-mail -->
+                <input type="hidden" name="_replyto" value="{{email}}">
+                
+                <!-- Campos ocultos para rastrear o lead -->
+                <input type="hidden" name="Imóvel" value="Mansão Ferradura • R$ 6.000.000">
+                <input type="hidden" name="Página" value="Página de Contato">
+                
+                <!-- Redireciona para uma página de obrigado após envio (crie um arquivo obrigado.html ou mude a URL) -->
+                <input type="hidden" name="_next" value="https://mansaoavendaferradura.com.br/obrigado.html">
+                
+                <!-- Desativa o captcha padrão do FormSubmit (ele tem proteção própria) -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Assunto do e-mail que você vai receber -->
+                <input type="hidden" name="_subject" value="Novo lead - Mansão Ferradura">
+                
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+         
+            <div class="contact-info">
+                <p>Ou fale diretamente pelo WhatsApp</p>
+                <p style="margin:20px 0;font-size:1.5rem;">
+                    <a href="https://wa.me/+351914435017?text=Olá!%20Tenho%20interesse%20na%20Mansão%20Ferradura%20em%20Búzios" target="_blank">
+                        +351 914 435 017
+                    </a>
+                </p>
+                <p>Página em teste</p>
+            </div>
+        </div>
+    </div>
+ 
+    <nav>
+        <a href="index.html">Galeria</a>
+        <a href="descricao.html">Descrição Completa</a>
+    </nav>
+    <script>
+        // Fallback de imagem de fundo
+        const hero = document.getElementById('hero-bg');
+        const testImg = new Image();
+        testImg.onload = () => hero.style.backgroundImage = `url('fotos/0.webp')`;
+        testImg.onerror = () => {
+            const testJpg = new Image();
+            testJpg.onload = () => hero.style.backgroundImage = `url('fotos/0.jpg')`;
+            testJpg.onerror = () => hero.style.backgroundImage = `url('fotos/0.png')`;
+            testJpg.src = 'fotos/0.jpg';
+        };
+        testImg.src = 'fotos/0.webp';
+    </script>
+</body>
+</html>

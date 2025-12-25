@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado • Mansão Ferradura • Búzios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #d4af87; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body, html { height:100%; background:#0f0f0f; color:white; font-family:'Inter', sans-serif; overflow:hidden; }
+
+        .hero {
+            position:fixed; top:0; left:0; width:100%; height:100%; z-index:1;
+            background: url('fotos/0.png') center/cover no-repeat;
+            filter: brightness(0.65);
+        }
+
+        /* Força centralização real em qualquer altura */
+        .content {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px 180px; /* espaço generoso em cima e embaixo */
+        }
+
+        .card {
+            background: rgba(15,15,15,0.92);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(212,175,135,0.25);
+            border-radius: 32px;
+            padding: 70px 80px;
+            max-width: 760px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 50px 120px rgba(0,0,0,0.9);
+        }
+
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 5rem; 
+            font-weight: 700; 
+            margin-bottom: 20px; 
+            color: var(--accent); 
+        }
+        .thank-you-text { font-size: 1.65rem; line-height: 1.8; opacity: 0.95; margin: 24px 0; }
+        .highlight { font-size: 1.9rem; font-weight: 600; color: var(--accent); margin: 44px 0; }
+        .btn-whatsapp {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            font-weight: 700;
+            font-size: 1.45rem;
+            letter-spacing: 1.2px;
+            padding: 20px 56px;
+            border-radius: 70px;
+            text-decoration: none;
+            transition: all 0.4s;
+            box-shadow: 0 20px 50px rgba(212,175,135,0.4);
+        }
+        .btn-whatsapp:hover { background: #f0d5b0; transform: translateY(-6px); }
+        .back-link { 
+            color: rgba(255,255,255,0.7); 
+            font-size: 1.15rem; 
+            margin-top: 50px; 
+            display: inline-block; 
+        }
+        .back-link:hover { color: white; text-decoration: underline; }
+
+        /* Badges topo */
+        .top-badge {
+            position: fixed; top: 40px; z-index: 11; background: #000; color: #d4af87;
+            padding: 14px 32px; border-radius: 50px; font-family: 'Playfair Display', serif;
+            font-weight: 700; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+        }
+        #area-badge { left: 40px; font-size: 1.9rem; }
+        #counter { left: 50%; transform: translateX(-50%); font-size: 1.2rem; color: white; }
+        #info-badge { right: 40px; font-size: 1.9rem; }
+
+        nav {
+            position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(255,255,255,0.78);
+            backdrop-filter: blur(20px); padding: 22px 0; text-align: center; z-index: 100;
+        }
+        nav a { color: #000; margin: 0 55px; font-weight: 500; font-size: 1.1rem; text-decoration: none; }
+        nav a:hover { color: var(--accent); }
+
+        /* Responsivo perfeito */
+        @media (max-width: 868px) {
+            h1 { font-size: 3.8rem; }
+            .thank-you-text { font-size: 1.4rem; }
+            .highlight { font-size: 1.6rem; }
+            .btn-whatsapp { font-size: 1.3rem; padding: 18px 44px; }
+            .card { padding: 60px 40px; }
+            .content { padding: 120px 20px 160px; }
+        }
+        @media (max-height: 680px) {
+            .content { padding: 80px 20px 140px; }
+            .card { padding: 50px 30px; }
+            h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero" id="hero-bg"></div>
+
+    <!-- Badges fixos em português -->
+    <div id="area-badge" class="top-badge">Mansão Ferradura</div>
+    <div id="counter" class="top-badge">Obrigado</div>
+    <div id="info-badge" class="top-badge">R$ 6.000.000</div>
+
+    <div class="content">
+        <div class="card">
+
+            <!-- Português (padrão) -->
+            <h1 data-lang="pt">Obrigado!</h1>
+            <p class="thank-you-text" data-lang="pt">Recebemos sua mensagem com sucesso.</p>
+            <p class="highlight" data-lang="pt">Entraremos em contato em até 24 horas.</p>
+            <a href="https://wa.me/+351914435017?text=Olá!%20Acabei%20de%20preencher%20o%20formulário%20da%20Mansão%20Ferradura" 
+               target="_blank" class="btn-whatsapp" data-lang="pt">Falar agora no WhatsApp</a>
+
+            <!-- Inglês -->
+            <h1 data-lang="en" style="display:none">Thank You!</h1>
+            <p class="thank-you-text" data-lang="en" style="display:none">We successfully received your message.</p>
+            <p class="highlight" data-lang="en" style="display:none">We will contact you within 24 hours.</p>
+            <a href="https://wa.me/+351914435017?text=Hello!%20I%20just%20filled%20out%20the%20form%20for%20Mansão%20Ferradura" 
+               target="_blank" class="btn-whatsapp" data-lang="en" style="display:none">Chat on WhatsApp now</a>
+
+            <!-- Espanhol e Italiano (mantidos) -->
+            <h1 data-lang="es" style="display:none">¡Gracias!</h1>
+            <p class="thank-you-text" data-lang="es" style="display:none">Hemos recibido su mensaje con éxito.</p>
+            <p class="highlight" data-lang="es" style="display:none">Nos pondremos en contacto en menos de 24 horas.</p>
+            <a href="https://wa.me/+351914435017?text=¡Hola!%20Acabo%20de%20rellenar%20el%20formulario%20de%20Mansão%20Ferradura" 
+               target="_blank" class="btn-whatsapp" data-lang="es" style="display:none">Hablar por WhatsApp ahora</a>
+
+            <h1 data-lang="it" style="display:none">Grazie!</h1>
+            <p class="thank-you-text" data-lang="it" style="display:none">Abbiamo ricevuto il tuo messaggio con successo.</p>
+            <p class="highlight" data-lang="it" style="display:none">Ti ricontatteremo entro 24 ore.</p>
+            <a href="https://wa.me/+351914435017?text=Ciao!%20Ho%20appena%20compilato%20il%20modulo%20per%20Mansão%20Ferradura" 
+               target="_blank" class="btn-whatsapp" data-lang="it" style="display:none">Contattaci su WhatsApp</a>
+
+            <br><br>
+            <a href="index.html" class="back-link" data-lang="pt">← Voltar à galeria de fotos</a>
+            <a href="index.html" class="back-link" data-lang="en" style="display:none">← Back to photo gallery</a>
+            <a href="index.html" class="back-link" data-lang="es" style="display:none">← Volver a la galería</a>
+            <a href="index.html" class="back-link" data-lang="it" style="display:none">← Torna alla galleria</a>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Galeria</a>
+        <a href="descricao.html">Descrição Completa</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <script>
+        // Detecção de idioma (português como padrão)
+        const userLang = (navigator.language || navigator.userLanguage || 'pt').slice(0,2).toLowerCase();
+        const lang = ['en','es','it'].includes(userLang) ? userLang : 'pt';
+
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            if (el.getAttribute('data-lang') === lang) el.style.display = 'block';
+            else el.style.display = 'none';
+        });
+
+        // Fundo com fallback
+        const hero = document.getElementById('hero-bg');
+        const test = new Image();
+        test.onload = () => hero.style.backgroundImage = `url('fotos/0.webp')`;
+        test.onerror = () => {
+            const jpg = new Image();
+            jpg.onload = () => hero.style.backgroundImage = `url('fotos/0.jpg')`;
+            jpg.onerror = () => hero.style.backgroundImage = `url('fotos/0.png')`;
+            jpg.src = 'fotos/0.jpg';
+        };
+        test.src = 'fotos/0.webp';
+    </script>
+</body>
+</html>
+```
+
+

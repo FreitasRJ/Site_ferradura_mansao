@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansão Ferradura • Praia da Ferradura • Búzios • R$ 6.000.000</title>
+    
+    <meta name="description" content="Mansão à beira-mar na Praia da Ferradura, Búzios. 600 m², 5 suítes, piscina de borda infinita com vista para o mar. R$ 6.000.000.">
+    <meta property="og:title" content="Mansão Ferradura • Exclusividade à Beira-Mar • R$ 6M">
+    <meta property="og:description" content="600 m² • 5 suítes • Piscina infinita • Vista mar privilegiada • Búzios • 10 min. do Centro de Búzios">
+    <meta property="og:image" content="https://seusite.com/fotos/0.jpg">
+    <meta property="og:url" content="https://mansaoavendaferradura.com.br/mansao-ferradura.html">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #c19a6b; /**#d4af87**/
+            --text: #1a1a1a; /**#1a1a1a **/
+            --bg: #faf8f5;
+            --header-bg: rgba(250,248,245,10);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body, html { height:100%; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.8; }
+        header {
+            position:fixed; top:0; left:0; width:100%; z-index:100;
+            background:var(--header-bg); backdrop-filter:blur(20px);
+            padding:20px 40px; display:flex; justify-content:space-between; align-items:center;
+            border-bottom:1px solid rgba(212,175,135,0.12); box-shadow:0 4px 20px rgba(0,0,0,0.04);
+        }
+        header .logo h1 { font-family:'Playfair Display', serif; font-size:2.2rem; font-weight:700; letter-spacing:1px; margin:0; }
+        header .subtitle { font-size:0.95rem; color:#666; letter-spacing:3px; text-transform:uppercase; margin-top:4px; }
+        .btn-back {
+            background:#000; color:var(--accent); padding:12px 32px; border-radius:50px;
+            text-decoration:none; font-weight:600; font-size:1rem; letter-spacing:1px;
+            box-shadow:0 8px 25px rgba(0,0,0,0.3); transition:all 0.3s ease;
+        }
+        .btn-back:hover { background:var(--accent); color:#000; transform:translateY(-2px); }
+        main { max-width:1100px; margin:0 auto; padding:140px 40px 120px; }
+        section { margin-bottom:80px; }
+        h2 { font-family:'Playfair Display', serif; font-size:3rem; margin-bottom:24px; position:relative; display:inline-block; }
+        h2::after { content:''; position:absolute; left:0; bottom:-12px; width:80px; height:3px; background:var(--accent); border-radius:2px; }
+        h3 { font-family:'Playfair Display', serif; font-size:1.8rem; margin:48px 0 20px; color:var(--accent); }
+        ul { list-style:none; padding-left:10px; margin-bottom:32px; }
+        ul li { margin:14px 0; position:relative; padding-left:32px; font-size:1.1rem; }
+        ul li::before { content:"✓"; position:absolute; left:0; color:var(--accent); font-weight:bold; font-size:1.4rem; line-height:1; }
+
+        .highlight-text { font-size:1.15rem; line-height:1.9; color:#333; margin:90px auto; max-width:900px; }
+        .highlight-text p { margin-bottom:26px; }
+
+        .price-box { background:#000; color:var(--accent); padding:40px; text-align:center; border-radius:20px; margin:60px 0; box-shadow:0 20px 60px rgba(0,0,0,0.15); }
+        .price-box .price { font-family:'Playfair Display', serif; font-size:4.5rem; font-weight:700; line-height:1; }
+        .price-box .note { margin-top:12px; font-size:1.1rem; opacity:0.9; }
+        .map-container { width:100%; height:520px; border-radius:20px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.15); margin:60px 0; }
+        .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; margin:80px 0; }
+        .gallery img { width:100%; height:240px; object-fit:cover; border-radius:16px; box-shadow:0 12px 32px rgba(0,0,0,0.12); transition:transform 0.4s ease; }
+        .gallery img:hover { transform:scale(1.04); }
+
+        .whatsapp-btn {
+            position:fixed; bottom:30px; right:30px; z-index:99;
+            width:58px; height:58px; background:#25d366; border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            box-shadow:0 8px 25px rgba(37,211,102,0.45);
+            transition:all 0.3s ease; animation:float 3s infinite ease-in-out;
+            text-decoration:none;
+        }
+        .whatsapp-btn img { width:36px; height:36px; }
+        .whatsapp-btn:hover { transform:scale(1.15); }
+        @keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
+
+        @media (max-width:768px) {
+            header { padding:16px 20px; flex-direction:column; gap:16px; text-align:center; }
+            main { padding:130px 20px 100px; }
+            .highlight-text { font-size:1.05rem; padding:0 10px; }
+            .map-container { height:420px; }
+            .price-box .price { font-size:3.8rem; }
+            .whatsapp-btn { width:54px; height:54px; bottom:20px; right:20px; }
+            .whatsapp-btn img { width:32px; height:32px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Mansão Ferradura</h1>
+            <div class="subtitle">Praia da Ferradura • Búzios • Rio de Janeiro</div>
+        </div>
+        <a href="index.html" class="btn-back" aria-label="Voltar à galeria">Voltar à Galeria</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exclusividade à Beira-Mar</h2>
+            <p>Localizada em um dos pontos mais privilegiados da <strong>Praia da Ferradura</strong>, esta mansão contemporânea de <strong>600 m²</strong> construídos oferece o que há de melhor em arquitetura, conforto e vista para o mar.</p>
+        </section>
+
+        <div class="price-box">
+            <div class="price">R$ 6.000.000</div>
+            <div class="note">Valor à vista • Financiamento consultivo</div>
+        </div>
+
+        <section class="highlight-text">
+            <p>Acordar o dia com o sol nascendo sobre a curva perfeita da Praia da Ferradura é um privilégio que poucos conhecem de verdade. Esta mansão foi desenhada para aproveitar linda vista que a natureza proporciona  — da suíte master à área gourmet com bar molhado — tenha como moldura o azul intenso do mar de Búzios.</p>
+            <p>Aqui, a privacidade é absoluta: acesso direto à mar por escadaria particular, terreno de 1000 m², o som das ondas quebrando ao fundo. À noite, a piscina infinita reflete as luzes da casa e parece se fundir ao horizonte — sensação que nenhum outro imóvel da orla consegue repetir.</p>
+            <p>A poucos minutos de carro do centro de Búzios, local de concentração de restaurantes, mas suficientemente reservada para que você nunca precise dividi-la com turistas. Em resumo: não é apenas uma casa à beira-mar. É o seu refúgio definitivo em um dos metros quadrados mais disputados do litoral brasileiro.</p>
+        </section>
+
+        <section>
+            <h2>Localização Privilegiada</h2>
+            <p>Coordenadas exatas: <strong>22°46'21.5"S 41°52'54.4"W</strong></p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d918.073!2d-41.882066!3d-22.772638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQ2JzIxLjUiUyA0McKwNTInNTQuNCJX!5e1!3m2!1spt-BR!2sbr!4v1731800000000!5m2!1spt-BR!2sbr"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Detalhes da Propriedade</h2>
+
+            <h3>Área Construída</h3>
+            <ul>
+                <li>600 m² de área construída</li>
+                <li>1000 m² de terreno</li>
+            </ul>
+
+            <h3>Suítes & Acomodações</h3>
+            <ul>
+                <li>5 suítes (1 Master de 35 m²)</li>
+                <li>Todas com condicionadores de ar</li>
+                <li>Vista mar em 4 suítes</li>
+
+            </ul>
+
+            <h3>Área de Lazer</h3>
+            <ul>
+                <li>Piscina 36 m³ com borda infinita</li>
+                <li>Churrasqueira gourmet + bar</li>
+            </ul>
+
+            <h3>Diferenciais</h3>
+            <ul>
+                <li>Energia solar completa</li>
+                <li>arrojado projeto arquitetônico que incorpora materiais como bambú, peroba mica, ipê tabaco e ipê champanhe</li> 
+                <li>Ampla cisterna com capacidade para 40 mil litros</li>
+                <li>Garagem para até 3 carros</li>
+                <li>Escritório em vidro com vista para o mar</li>
+                <li>Sauna seca com vista panorâmica</li>
+                <li>Acesso ao mar</li>
+                <li>Churrasqueira interna</li>
+            </ul>
+        </section>
+
+        <div class="gallery">
+            <img src="fotos/0.jpg" alt="Fachada frontal da Mansão Ferradura" loading="lazy">
+            <img src="fotos/16.jpg" alt="Piscina infinita com vista para o mar" loading="lazy">
+            <img src="fotos/43.jpg" alt="Suíte master com vista 180°" loading="lazy">
+            <img src="fotos/35.jpg" alt="Área gourmet e churrasqueira" loading="lazy">
+        </div>
+
+        <section style="text-align:center; margin:100px 0;">
+            <h2>Pronto para visitar?</h2>
+            <p style="font-size:1.4rem; margin:20px 0;">Agende agora sua visita exclusiva e viva essa experiência única.</p>
+        </section>
+    </main>
+
+    <a href="https://wa.me/+351914435017?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20à%20Mansão%20Ferradura"
+       class="whatsapp-btn" target="_blank" aria-label="Falar no WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+</body>
+</html>
