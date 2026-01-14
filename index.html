@@ -1,174 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mansão à Venda • Praia da Ferradura • Búzios</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root { --accent: #d4af87; }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body, html { height:100%; overflow:hidden; background:#0f0f0f; font-family:'Inter', sans-serif; }
-        #carousel { position:relative; width:100%; height:100%; }
-        .slide { position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; transition:opacity 1s ease; display:flex; align-items:center; justify-content:center; }
-        .slide.active { opacity:1; z-index:1; }
-        .slide img { width:100%; height:100%; object-fit:cover; }
-        .top-badge {
-            position:fixed; top:40px; z-index:11;
-            background:#000; color:#d4af87;
-            padding:14px 28px; border-radius:50px;
-            font-family:'Playfair Display', serif; font-weight:700;
-            letter-spacing:1px; box-shadow:0 10px 40px rgba(0,0,0,0.4);
-            opacity:0; transition:opacity 0.7s ease;
-        }
-        .top-badge.show { opacity:1; }
-        #area-badge { left:40px; font-size:1.8rem; min-width:260px; text-align:center; }
-        #counter { left:50%; transform:translateX(-50%); font-size:1.15rem; padding:10px 28px; font-family:'Inter',sans-serif; font-weight:500; color:white; }
-        #info-badge { right:40px; font-size:1.8rem; min-width:260px; text-align:center; }
-        .map-pin {
-            position:absolute; width:44px; height:54px; transform:translate(-50%,-100%);
-            z-index:9; opacity:0; transition:opacity 0.8s ease; pointer-events:none;
-        }
-        .slide.active .map-pin { opacity:1; }
-        .map-pin svg { width:100%; height:100%; filter:drop-shadow(0 4px 12px rgba(0,0,0,0.6)); animation:floatPin 3s infinite ease-in-out; }
-        @keyframes floatPin { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
-        .nav-arrow { position:absolute; top:50%; transform:translateY(-50%); width:60px; height:60px; background:rgba(255,255,255,0.9); color:#000; border:none; cursor:pointer; z-index:10; border-radius:50%; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(10px); box-shadow:0 8px 30px rgba(0,0,0,0.2); transition:all 0.3s ease; }
-        .nav-arrow:hover { background:var(--accent); color:white; transform:translateY(-50%) scale(1.1); }
-        .prev { left:30px; } .next { right:30px; }
-        nav { position:fixed; bottom:0; left:0; width:100%; background:rgba(255,255,255,0.75); backdrop-filter:blur(20px); padding:20px 0; text-align:center; z-index:100; border-top:1px solid rgba(212,175,135,0.2); }
-        nav a { color:#000; text-decoration:none; margin:0 30px; font-weight:500; font-size:1.05rem; letter-spacing:1px; position:relative; transition:all 0.3s; }
-        nav a:hover { color:var(--accent); }
-        nav a::after { content:''; position:absolute; width:0; height:1px; bottom:-8px; left:50%; background:var(--accent); transition:all 0.4s; }
-        nav a:hover::after { width:100%; left:0; }
-        #title-overlay { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; color:white; z-index:9; width:90%; max-width:1000px; pointer-events:none; }
-        #title-overlay h1 { font-family:'Playfair Display', serif; font-size:4.5rem; font-weight:700; line-height:1.1; margin-bottom:16px; text-shadow:0 4px 20px rgba(0,0,0,0.7); }
-        #title-overlay p { font-size:1.4rem; opacity:0.9; letter-spacing:2px; text-transform:uppercase; font-weight:300; text-shadow:0 2px 10px rgba(0,0,0,0.6); }
-        @media (max-width:768px) {
-            .top-badge { top:20px; font-size:1.3rem; padding:10px 20px; }
-            #area-badge, #info-badge { min-width:180px; }
-            #counter { font-size:1rem; padding:8px 20px; }
-        }
-    </style>
-</head>
-<body>
-    <div id="carousel"></div>
-    <div id="title-overlay">
-        <h1>Mansão Ferradura</h1>
-        <p>Búzios • Rio de Janeiro</p>
-    </div>
-    <div id="area-badge" class="top-badge">Mansão Ferradura</div>
-    <div id="counter" class="top-badge show">1/69</div>
-    <div id="info-badge" class="top-badge show">R$ 6.000.000</div>
-
-    <button class="nav-arrow prev" onclick="moverSlide(-1)">
-        <svg viewBox="0 0 24 24" width="28" height="28"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/></svg>
-    </button>
-    <button class="nav-arrow next" onclick="moverSlide(1)">
-        <svg viewBox="0 0 24 24" width="28" height="28"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/></svg>
-    </button>
-
-    <nav>
-        <a href="descricao.html">Descrição Completa</a>
-        <a href="contato.html">Contato</a> <!-- alterado para página contato.html -->
-    </nav>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mansão Ferradura • Praia da Ferradura • Búzios</title>
+    <meta name="description" content="Mansão à beira-mar na Praia da Ferradura, Búzios. 600 m², 5 suítes, piscina de borda infinita com vista para o mar. R$ 6.000.000.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        const ordemFotos = [0,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,
-                            1,2,3,4,5,6,7,8,9,10,11,35,36,37,38,39,40,41,42,66,67,68,
-                            43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65];
-        const total = ordemFotos.length;
-        const faixas = [
-            {min:35, max:42, texto:"Bar e Churrasqueira"},
-            {min:43, max:48, texto:"Suíte Master"},
-            {min:49, max:52, texto:"Suíte 4"},
-            {min:53, max:56, texto:"Suíte 3"},
-            {min:57, max:61, texto:"Suíte 2"},
-            {min:62, max:65, texto:"Suíte 5"},
-            {min:66, max:68, texto:"Entrada e Hall"}
-        ];
-        const pins = {1:{x:58,y:68},2:{x:59,y:69},3:{x:56,y:72},4:{x:57,y:70},5:{x:57,y:71},6:{x:54,y:65},7:{x:56,y:73},8:{x:92,y:58},9:{x:22,y:55},10:{x:57,y:60},11:{x:60,y:62}};
-        const pinSVG = `<svg viewBox="0 0 24 34" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 9 12 22 12 22s12-13 12-22C24 5.373 18.627 0 12 0z" fill="#ea4335"/>
-            <circle cx="12" cy="12" r="5" fill="white"/>
-            <circle cx="12" cy="12" r="3" fill="#ea4335"/>
-        </svg>`;
-        const carousel = document.getElementById('carousel');
-        const areaBadge = document.getElementById('area-badge');
-        const counter = document.getElementById('counter');
-        const infoBadge = document.getElementById('info-badge');
-        const titleOverlay = document.getElementById('title-overlay');
-        let atual = 0;
-        const infos = ["R$ 6.000.000","600 m² construídos","5 suítes","Piscina 36 m³","Vista mar","Sauna","Ferradura • Búzios"];
-        let i = 0;
-        setInterval(() => {
-            infoBadge.style.opacity = 0;
-            setTimeout(() => {
-                infoBadge.textContent = infos[i % infos.length];
-                infoBadge.style.opacity = 1;
-                i++;
-            }, 700);
-        }, 4000);
-
-        ordemFotos.forEach((num, idx) => {
-            const slide = document.createElement('div');
-            slide.className = 'slide';
-            if (idx === 0) slide.classList.add('active');
-            const img = document.createElement('img');
-            img.loading = 'lazy';
-            img.alt = `Foto ${num}`;
-            const test = new Image();
-            test.onload = () => img.src = `fotos/${num}.webp`;
-            test.onerror = () => img.src = `fotos/${num}.jpg`;
-            test.src = `fotos/${num}.webp`;
-            slide.appendChild(img);
-            if (pins[num]) {
-                const pin = document.createElement('div');
-                pin.className = 'map-pin';
-                pin.style.left = pins[num].x + '%';
-                pin.style.top = pins[num].y + '%';
-                pin.innerHTML = pinSVG;
-                slide.appendChild(pin);
-            }
-            carousel.appendChild(slide);
-        });
-        const slides = document.querySelectorAll('.slide');
-
-        function atualizar() {
-            slides.forEach((s, idx) => s.classList.toggle('active', idx === atual));
-            const foto = ordemFotos[atual];
-            const faixa = faixas.find(f => foto >= f.min && foto <= f.max);
-            if (faixa) {
-                areaBadge.textContent = faixa.texto;
-                areaBadge.classList.add('show');
-            } else {
-                areaBadge.classList.remove('show');
-            }
-            counter.textContent = `${atual + 1}/${total}`;
-            counter.classList.add('show');
-            titleOverlay.style.opacity = (atual === 0) ? '1' : '0';
-        }
-
-        function moverSlide(dir) {
-            atual = (atual + dir + total) % total;
-            atualizar();
-        }
-
-        document.addEventListener('keydown', e => {
-            if (e.key === 'ArrowLeft') moverSlide(-1);
-            if (e.key === 'ArrowRight') moverSlide(1);
-        });
-
-        let touchX = 0;
-        document.addEventListener('touchstart', e => touchX = e.touches[0].clientX);
-        document.addEventListener('touchend', e => {
-            const diff = touchX - e.changedTouches[0].clientX;
-            if (Math.abs(diff) > 50) moverSlide(diff > 0 ? 1 : -1);
-        });
-
-        areaBadge.classList.remove('show');
-        counter.classList.add('show');
-        infoBadge.classList.add('show');
-        atualizar();
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: '#c19a6b',
+              'accent-light': '#d4af87',
+              dark: '#0f0f0f',
+              light: '#faf8f5',
+            },
+            fontFamily: {
+              serif: ['Playfair Display', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
     </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f0f0f;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c19a6b;
+        border-radius: 10px;
+      }
+      .luxury-shadow {
+        box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5), 0 18px 36px -18px rgba(0, 0, 0, 0.5);
+      }
+      .glass {
+        background: rgba(15, 15, 15, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-dark text-white font-sans antialiased">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
 </html>

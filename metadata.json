@@ -1,0 +1,8 @@
+
+{
+  "name": "Mansão Ferradura • Búzios",
+  "description": "Website exclusivo para a venda da Mansão Ferradura em Búzios. 600m², 5 suítes, piscina infinita e luxo à beira-mar.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
